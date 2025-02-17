@@ -19,7 +19,7 @@ const TextInput: React.FC<TextInputProps> = ({ placeholder }) => {
         console.log("User input:", input); 
         console.log("Making call to Spotify API..."); 
         // call to Spotify API
-        let trackList = parseTracks(input.slice(-22)); 
+        const trackList = parseTracks(input.slice(-22)); 
         console.log("track list: ", trackList); 
     };
 
