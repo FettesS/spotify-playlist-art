@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from "react"; 
+import { parseTracks } from "../../../functions/spotify";
 
 interface TextInputProps {
     placeholder: string; 
@@ -16,7 +17,10 @@ const TextInput: React.FC<TextInputProps> = ({ placeholder }) => {
 
     const processInput = (input: string) => {
         console.log("User input:", input); 
+        console.log("Making call to Spotify API..."); 
         // call to Spotify API
+        let trackList = parseTracks(input.slice(-22)); 
+        console.log("track list: ", trackList); 
     };
 
     return (
